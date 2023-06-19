@@ -1,0 +1,75 @@
+.wrapper {
+    .inner {
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        .video-container {
+            cursor: pointer;
+            inset: 0;
+            position: absolute;
+            .video-inner {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                .img-thumb {
+                    display: flex;
+                    height: 100%;
+                
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+                &:hover {
+                    .img-thumb {
+                        display: none;
+                    }
+            
+                    .video {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        video {
+                            width: 100%;
+                            // height: 100%;
+
+                        }
+                    }
+                }
+                .video {
+                    display: none;
+                }
+                .views {
+                    align-items: center;
+                    background: linear-gradient(rgba(22,24,35,0) 2.92%,rgba(22,24,35,.5) 98.99%);
+                    bottom: 0;
+                    display: flex;
+                    height: 100px;
+                    padding: 67px 13px 17px;
+                    position: absolute;
+                    width: 100%;
+                
+                    .views-counts {
+                        color: var(--white-color);
+                        font-weight: 600;
+                        margin-left: 4px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .des {
+        box-sizing: initial;
+        font-weight: 400;
+        height: 28px;
+        margin-top: 4px;
+        overflow: hidden;
+        padding: 2px 4px 0;
+    }
+}

@@ -1,0 +1,62 @@
+.wrapper{
+    padding: 20px;
+    min-width: 320px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.body{
+    margin-top: 12px;
+    color: var(--text-primary-color);
+
+}
+.nickname{
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: "IBM Plex Sans", SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+.check-icon{
+    margin-left: 6px;
+    font-size: 1.4rem;
+    color: rgb(32, 213, 236);
+}
+.name{
+    margin: 0;
+    font-family: "IBM Plex Sans", ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 20px;
+
+}
+.analytics{
+    margin-top: 8px;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+.label{
+    color: var(--text-gray-color);
+    font-size: 17px;
+    line-height: 20px;
+    display: inline-block;
+}
+.value ~ .value {
+    margin-left: 20px;
+}
+.value{
+    font-weight: 700;
+    margin-right: 6px;
+    font-size: 17px;
+    line-height: 20px;
+    display: inline-block;
+}

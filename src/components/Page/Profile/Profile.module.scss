@@ -1,0 +1,216 @@
+.wrapper {
+    padding: 12px;
+    .infor {
+        display: flex;
+        justify-content: space-between;
+        max-width: 600px;
+        .container {
+            .basic {
+                display: flex;
+                .avatar {
+                    border-radius: 50%;
+                    cursor: pointer;
+                    height: 116px;
+                    object-fit: cover;
+                    width: 116px;
+                }
+                .body {
+                    cursor: pointer;
+                    margin-left: 20px;
+                }
+                .user-name {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    line-height: 38px;
+                    text-align: left;
+                    text-overflow: ellipsis;
+                }
+                .full-name {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    height: 25px;
+                    line-height: 25px;
+                    margin-bottom: 16px;
+                    max-width: 450px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .follow-btn {
+                    min-width: 208px;
+                }
+            }
+            .counts {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 22px;
+                max-width: 345px;
+
+                .count-item {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    direction: ltr;
+                    -webkit-align-items: baseline;
+                    -webkit-box-align: baseline;
+                    -ms-flex-align: baseline;
+                    align-items: baseline;
+                
+                    span {
+                        color: var(--text-gray-color);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22px;
+                        display: inline-block;
+                        margin-left: 6px;
+                    }
+                }
+            }
+            .website {
+                // display: flex;
+                // align-items: center;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                margin-top: 5px;
+                .website-link {
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+    .actions-btn {
+        display: flex;
+        height: 24px;
+        justify-content: space-between;
+        margin-top: 8px;
+        width: 75px;
+        cursor: pointer;
+
+        .more-tab {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        .action-more {
+            align-items: center;
+            box-shadow: none;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            font-weight: 600;
+            min-width: 180px;
+            padding: 0 16px;
+        
+            &:hover {
+                background-color: var(--background-gray-color-03);
+            }
+        
+            span {
+                align-items: center;
+                display: flex;
+                padding: 13px 0;
+        
+                svg {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .videos {
+        align-items: flex-start;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 20px;
+        min-height: 490px;
+        min-width: 520px;
+
+        .tabs-video {
+            align-items: stretch;
+            display: flex;
+            flex-direction: row;
+            height: 44px;
+            justify-content: stretch;
+            margin-bottom: 8px;
+            position: relative;
+            width: 460px;
+
+            &::after {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.12);
+                transform: scaleY(0.5);
+            }
+
+            .tab-item {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                position: relative;
+                display: flex;
+                -webkit-box-align: center;
+                
+                align-items: center;
+                -webkit-box-pack: center;
+                justify-content: center;
+                flex: 1 1 0%;
+                height: 44px;
+                cursor: pointer;
+                text-align: center;
+                color: var(--text-gray-color2);
+
+                &.selected {
+                    color: currentColor;
+                }
+
+                svg {
+                    margin-right: 6px;
+                }
+            }
+            .tab-item:nth-of-type(2) {
+                &:hover ~ {
+                    .underline {
+                        transform: translateX(230px);
+                    }
+                }
+            }  
+            
+            .underline {
+                position: absolute;
+                transform: translateX(0);
+                width: 50%;
+                height: 2px;
+                background: currentColor;
+                left: 0px;
+                bottom: 0px;
+                transition: transform 0.3s ease 0s;
+            }
+
+        }
+        .video-list {
+            grid-gap: 24px 16px;
+            display: grid;
+            gap: 24px 16px;
+            grid-template-columns: repeat(auto-fill,minmax(184px,1fr));
+            width: 100%;
+        }
+    }
+    
+}

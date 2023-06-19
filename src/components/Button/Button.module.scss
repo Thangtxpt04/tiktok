@@ -1,0 +1,85 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    min-width: 100px;
+    font-weight: 700;
+    padding: 8px 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-radius: 4px;
+    color: var(--text-primary-color);
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    // Hai nút đứng cạnh nhau thì thằng đằng sau sẽ cách thằng đằng trước 16px
+    + .wrapper {
+        margin-left: 16px;
+    }
+
+    &.disibled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+.primary {
+    background-color: var(--primary-color);
+    color: #fff;
+
+    &:hover {
+        background: var(--background-primary-color2);
+    }
+}
+.outline {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+.text {
+    background-color: var(--white-color-2);
+    min-width: 110px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    // padding: 6px 16px;
+
+    &:hover {
+        background-color: var(--background-gray-color-03);
+    }
+}
+.rounded {
+    background-color: rgba(22,24,35,.06);
+    border: none;
+    border-radius: 50%;
+    height: 48px;
+    min-width: 30px;
+    padding: 0;
+    width: 48px;
+
+    &:hover {
+        border-color: rgba(22, 24, 35, .2);
+        // background-color: rgba(255, 255, 255, 1)
+    }
+}
+.icon {
+    display: inline-block;
+    text-align: center;
+}
+.title {
+    flex: 1;
+}
+.icon + .title , .title + .icon {
+    margin-left: 8px;
+}
+//Button size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}

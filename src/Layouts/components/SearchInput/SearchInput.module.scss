@@ -1,0 +1,99 @@
+
+.search{
+    position: relative;
+    display: flex;
+    width: 361px;
+    height: var(--search-height);
+    padding-left: 16px;
+    border: 1.5px solid transparent;
+    border-radius: var(--search-border-radious);
+    background-color: var(--background-gray-color-06);
+
+    input {
+        flex: 1 1;
+        height: 100%;
+        padding-right: 40px;
+        color: var(--text-primary-color);
+        font-size: 1.6rem;
+        background-color: transparent;
+        font-family: var(--font-family);
+        caret-color: var(--primary-color);
+    }
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: var(--text-gray-color);
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: calc(var(--search-height) - 18px);
+        width: 1px;
+        background-color: var(--background-gray-color-12);
+        top: 9px;
+        right: var(--search-btn-width);
+    }
+    &:focus-within {
+        border: 1.5px solid rgba(22, 24, 35, 0.2)
+    }
+
+    .clear-btn,
+    .loading{
+        position: absolute;
+        right: calc(var(--search-btn-width) + 16px);
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--background-gray-color-34);
+        background-color: transparent;
+    }
+    .loading {
+        animation: Spiner 1s linear infinite ;
+    }
+    @keyframes Spiner {
+        from {
+            transform: translateY(-50%) rotate(0);
+        }
+        to {
+            transform: translateY(-50%) rotate(360deg);
+        }
+    }
+    .search-btn{
+        width: var(--search-btn-width);
+        height: 100%;
+        border-top-right-radius: var(--search-border-radious);
+        border-bottom-right-radius: var(--search-border-radious);
+        background-color: transparent;
+        font-size: 1.8rem;
+        color: var(--background-gray-color-34);
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+            cursor: pointer;
+        }
+        &:active {
+            background: rgba(22, 24, 35, 0.06);
+        }
+    }
+}
+.search-result {
+    width: 361px;
+    .search-title {
+        font-size: 1.4rem;
+        padding: 5px 12px;
+        font-weight: 600;
+        color: var(--text-gray-color2);
+    }
+    .view-all,
+    .search-result-text{
+        cursor: pointer;
+        padding: 14px 16px;
+
+        span {
+            font-size: 12px;
+            margin-right: 8px
+        }
+        &:hover {
+            background: rgba(22,24,35,.03);
+        }
+    }
+}

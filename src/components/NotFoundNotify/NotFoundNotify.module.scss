@@ -1,0 +1,20 @@
+.notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 444px;
+    width: 100%;
+}
+.notify-container {
+    text-align: center;
+    .notify__title {
+        margin-top: 24px;
+    }
+    .notify__content {
+        color: var(--text-gray-color);
+    }
+}
+.user-icon {
+    opacity: 0.34;
+    line-height: 0;
+}
